@@ -13,7 +13,7 @@ function Header(){
                 <SearchBar />
                 <NavBar />
             </div>
-                <HeaderImage />
+                {/* <HeaderImage /> */}
         </header>
     )
 }
