@@ -4,7 +4,7 @@ import "./index.css"
 function WelcomeEmail(){
     return(
         <div id="welcomeEmailSection">
-            <form action="/" method="post">
+            <form action="http://localhost:3001" method="post">
                 <div id="welcomeLabelDiv">
                     <label id="welcomeLabel" for="email">SIGN UP FOR OUR DAILY INSIDER</label>
                 </div>

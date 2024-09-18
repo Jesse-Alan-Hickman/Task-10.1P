@@ -4,14 +4,14 @@ const mailgun = require('mailgun-js')
 
 const app = express();
 app.use(bodyParser.urlencoded({extended:true}));
-app.use(express.static("public"));
+app.use(express.static('public'));
 
-const api_key = '4c9a496cb46106cfdc3f7ac82dfb15fe-0f1db83d-4218afc8';
-const domain = 'sandbox7f199e758eda4baaaaf2bf262bfff736.mailgun.org';
+const api_key = '69a40674c3c694c4672e12b071b2dc0d-7a3af442-f044c575';
+const domain = 'sandbox4b11ea94df1a41039f5ef79407851ab5.mailgun.org';
 const mg = mailgun({apiKey: api_key, domain: domain});
 
 app.get('/', (request, response)=>{
-    response.sendFile(__dirname + "/index.html")
+    response.sendFile(__dirname + 'index.html');
 })
 
 app.post('/', (request, response)=>{
@@ -32,6 +32,6 @@ app.post('/', (request, response)=>{
     });
 })
 
-app.listen(3000, ()=>{
+app.listen(3001, ()=>{
     console.log("Server is running on port 3000.")
 })

@@ -27,6 +27,12 @@ const Login = (props) => {
         }})
     }
 
+    const handleClick = async() =>{
+        await fetch ('http://localhost:3000/')
+        .then (response => response.json())
+        .then(data=> console.log(data))
+    } 
+
     const handleSubmit = async (event) => {
         event.preventDefault();
 
@@ -68,6 +74,7 @@ const Login = (props) => {
                     type = 'submit'
                     text='Login'
                     className='login-button'
+                    onClick = {handleClick}
                     />
                 </form>
 
